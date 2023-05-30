@@ -35,45 +35,55 @@ a {
     text-decoration: none;
 }
 
+/*делаю картинку в CSS*/
 .header {
-     background-color: #000000;
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    background-color: #000000;
     color: #000000;
+    position: relative;
+    z-index: 0;
+    padding: 20px 0px 128px 0px;
     margin-bottom: 60px;
-    width: 1660px;
-    height: 523px;
-    display: flex;
-   }
+}
+
+ .header:before {
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
 .wrapper {
     width: 100%;
     display: flex;
-    position: fixed;
+    /*position: fixed; */
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    top: 0;
-    left: 0;
-     border: 5px solid red;
+    justify-content: space-between;
+    /*margin-left: auto;
+    margin-right: auto; */
+    align-items: center;
+         /*border: 5px solid red; */
+    padding: 20px 80px 20px 80px;
 }
 
 .logo {
     width: 179px;
-    height: 41px;
-}
-
-.header-img {
-    width: 1660px;
-    height: 523px;
-    /*background-image: url("././images/banner-bg.jpg");*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
     position: relative;
-    /*z-index: 0; */
-    }
+    z-index: 3;
+    /*height: 41px; */
+}
 
  /*Прячем меню*/
 /*@media (min-width: 640px) {
@@ -88,7 +98,6 @@ a {
     }
 }
 
-
 @media (max-width: 641px) {
     .js-menu_active .menu__button-label {
         opacity: 0;
@@ -96,11 +105,32 @@ a {
    } */
 
 .menu {
-    margin: 15px auto auto 340px;
-    text-align: right;
     display: flex;
-    flex-direction: row;
-    }
+    width: 462px;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.menu ul li:nth-of-type(1n + 2) a {
+    margin-left: 40px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu ul {
+    display: flex;
+}
+
 
 /*.menu-button {
     width: 1.4em;
@@ -170,56 +200,24 @@ button {
     text-transform: uppercase;
 }
 
-.menu ul li:nth-of-type(1n + 2) a {
-    margin-left: 40px;
-}
-
-.menu ul li a:hover {
-    text-decoration: underline;
-}
-
-.menu ul {
-    display: flex;
-}
-
-.header-slogan {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    border: 20px solid red;
-    width: 55%;
-    position: fixed; /*если не поставить, то не видно, но плывет слоган*/
-        }
-
-/*@media (min-width: 641px) {
-    .header-slogan {
-        margin-left: auto;
-        margin-right: auto;
-          }
-} */
-
-/*@media (min-width: 641px) { */
-.title {
-    font-family: "Open Sans", sans-serif;
-    font-size: 42px;
-    font-weight: 700;
-    margin: auto;
-    color: #ffff;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 75px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/*h1 {
-    color: red;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 75px;
-    text-align: center;
-    text-transform: uppercase; */
-
+ h1 {
+     max-width: 679px;
+     color: #ffffff;
+     position: relative;
+     font-family: "Open Sans", sans-serif;
+     padding-top: 110px;
+     font-size: 42px;
+     font-weight: 700;
+     font-style: normal;
+     letter-spacing: normal;
+     line-height: 1.7;
+     text-align: center;
+     /*margin-left: auto;
+     margin-right: auto; */
+     margin: auto;
+     text-transform: uppercase;
+     z-index: 3;
+ }
 
 /*Сейчас в тренде */
 .trends__title {
@@ -352,6 +350,17 @@ button {
 
 /*CSS media mobile Portrait*/
 @media (max-width: 640px) {
+
+    .header {
+        background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/banner-mobile.jpg");
+        /*background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        background-color: #000000;
+        color: #000000;
+        position: relative; */
+    }
     .trends {
         display: flex;
         flex-wrap: wrap;
