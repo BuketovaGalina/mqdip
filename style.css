@@ -35,9 +35,10 @@ a {
     text-decoration: none;
 }
 
-/*делаю картинку в CSS*/
+/*image в CSS*/
 .header {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+   background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg.jpg?raw=true");
+    /*background-image: ("../images/banner-bg.jpg"); не подключается выдает ошибку*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -131,7 +132,6 @@ a {
     display: flex;
 }
 
-
 /*.menu-button {
     width: 1.4em;
     height: 1em;
@@ -219,8 +219,9 @@ button {
      z-index: 3;
  }
 
+
 /*Сейчас в тренде */
-.trends__title {
+.trend-title {
     text-align: center;
     margin-bottom: 0px;
     font-family: "Open Sans", sans-serif;
@@ -230,7 +231,8 @@ button {
     line-height: 29.15px;
 }
 
-.trends__title::after {
+/*Полоска под заголовком*/
+ .trend-title::after {
     content: "";
     display: block;
     background-color: #b59f5b;
@@ -239,175 +241,175 @@ button {
     margin: 10px auto 35px auto;
 }
 
-/*Тренды копия на ней работаю*/
-.trend {
-    width: 100%;
-    display: flex;
-    box-sizing: content-box;
-    margin: 0 auto;
+/*CSS от 1200*/
+@media (min-width: 1200px) {
+       .trend {
+        display: flex;
+        max-width: 1660px;
+        flex-wrap: nowrap;
+       }
+
+   .trend-card  {
+        /*width: calc((100% - 120px) / 4); */
+       width: 100%;
+    }
 }
 
-.trend__item {
-    box-sizing: border-box;
-    width: 415px;
-    height: 348px;
-    text-align: center;
+ /*CSS 641-1199 портрет*/
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+    header {
+        background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg-tablet.jpg?raw=true");
+    }
+
+    .trend  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .trend-card {
+        width: 38%;
+    }
 }
 
-.trend_item ::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 20px;
+/*CSS 641-1199 пейзаж*/
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    header {
+        background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg-tablet.jpg?raw=true");
+    }
+    .trend {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    trend-card  {
+        width: 50%;
+    }
 }
 
-/*зазор между блоками*/
-.trend__item:nth-child(n + 1):nth-child(-n + 3) {
-    margin-right: 3px;
-}
-
- .trend__img {
-    width: 415px;
-    height: 348px;
-    margin-right: 30px;
-    background-color: #8acab5;
-    flex-basis: auto;
-    flex-shrink: 1;
-}
-
-/*CSS border*/
-.trend__border  {
-    box-sizing: border-box;
-    max-width: 400px;
-    height: 171px;
-    border: 3px solid #b59f5b;
-    margin-top: -200px;
-}
-
-.trend__border:after {
-    border: 3px solid red;
-}
-
-/*CSS категории*/
-.trend__categories ul li a {
-    width: 140px;
-    color: #b59f5b;
-    font-size: 14px;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 40px;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-/* категории в 1 строку в колонке*/
-.trend__categories ul {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-/*пробел между категориями  в колонке*/
-.trend__categories ul li:nth-of-type(1n + 2) {
-    margin-left: 18px;
-}
-
-/*CSS  Заголовок в статье*/
-.trend__title {
-    /*box-sizing: border-box;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; */
-    width: 140px;
-    /*color: #b59f5b;*/
-    font-size: 14px;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 40px;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.trend__name {
-    /*width: 300px; */
-    color: #ffffff;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 24px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
-}
-
-/*CSS media mobile Portrait*/
-@media (max-width: 640px) {
-
+/*CSS до 640 портрет*/
+@media (max-width: 640px) and (orientation: portrait) {
     .header {
-        background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/banner-mobile.jpg");
-        /*background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        background-color: #000000;
-        color: #000000;
-        position: relative; */
+        background-image: url("https://raw.githubusercontent.com/BuketovaGalina/mqdip/main/images/banner-mobile.jpg");
     }
-    .trends {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
 
-@media (max-width: 640px), (orientation: landscape) {
-    .trends {
+    .trend {
         display: flex;
-        flex-wrap: wrap;
+       flex-wrap: wrap;
     }
-    .trend__item {
-        width: 50%;
-    }
-}
 
- /*CSS media tablet*/
-@media (min-width: 641px) and (max-width: 1199px) {
-    .trend__item {
-        width: 50%;
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 641px), (orientation: landscape) {
-    .trends {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .trend__item {
+    .trend-card {
+        /* width: calc((100%) / 4); */
         width: 100%;
     }
+
+  /*  .main-info {
+        flex-grow: 1;
+        display: flex;
+    }  */
 }
 
-/*CSS media desktop*/
-@media (min-width: 1200px) and (max-width: 1660px) {
-    .trends {
-        max-width: 1660px;
-        margin: auto;
+/*CSS до 640 пейзаж*/
+@media (max-width: 640px) and (orientation: landscape) {
+    .header {
+        background-image: url("https://raw.githubusercontent.com/BuketovaGalina/mqdip/main/images/banner-mobile.jpg");
     }
-    .trend__item {
-        width: 25%;
-        font-size: 16px;
+
+    .trend {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .trend-card {
+      width: 42%;
     }
 }
 
-.trend__categories ul li a:hover {
+/*=======CSS общие для Тренд========*/
+.trend {
+    margin: auto;
+    gap: 4px;
+}
+
+   .trend-card {
+       display: flex;
+    position: relative;
+    /* width: 410px; */
+    min-height: 319px;
+    /*width: calc((100% - 120px) / 4);
+        /*это позиционирование по низу карточки*/
+    align-items: flex-end;
+   /* padding: 0px 22px 16px 18px; */
+}
+
+.trend-card::before {
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*position: absolute это ключевая фишка, иначе бокс растягивается*/
+   position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*Border c Заголовком и категории*/
+.trend-border {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    border: 3px solid #b59f5b;
+    padding: 20px 30px 25px 40px;
+   }
+
+.trend-border:hover {
+color: #b59f5b;
+}
+
+.trend-name {
+    /*width: 300px; */
+    /*color: #ffffff;
+    font-family: "Open Sans", sans-serif; */
+    text-transform: uppercase;
+    font-size: 20px;
+    /*font-weight: 700; */
+    padding-right: 15px;
+    line-height: 24px;
+    /*text-align: left;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+
+.trend-card {
+    background-repeat: no-repeat;
+}
+
+/*добавила*/
+.trend1 {
+    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend1.jpg?raw=true");
+    }
+.trend2 {
+    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend2.jpg?raw=true");
+}
+.trend3 {
+    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend3.jpg?raw=true");
+}
+.trend4 {
+    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend4.jpg?raw=true");
+}
+
+.trend-tag {
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.trend-tag:hover {
     text-decoration: underline;
 }
 
@@ -415,7 +417,7 @@ button {
   .container {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0px auto 0px auto;
     padding: 60px 15px 0px 15px ;
   }
@@ -423,7 +425,7 @@ button {
   /*Styles Left*/
   .main-info {
     max-width: 793px;
-  }
+      }
   
   .posts {
     display: flex;
@@ -644,7 +646,7 @@ button {
     height: 48px;
     outline: none;
     border: none;
-    background-image: url("/svg/search.svg");
+    background-image: url("//raw.githubusercontent.com/BuketovaGalina/mqdip/f89450abe81b0e5ee6c5cd180951162967a6738a/svg/search.svg");
     background-color: #b59f5b;
     background-size: 20px;
     vertical-align: middle;
@@ -819,7 +821,176 @@ button {
   .number-of-pages {
     vertical-align: super;
   }
-  
+
+/*Products*/
+.products-title {
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: "Open Sans", sans-serif;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29.15px;
+}
+
+/*Полоска заголовком*/
+.products-title::after {
+    content: "";
+    display: block;
+    background-color: #b59f5b;
+    width: 66px;
+    height: 3px;
+    margin: 10px auto 35px auto;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    box-sizing: border-box;
+    width: 25%;
+  /*  gap: 20px; */
+    text-align: left;
+   /*    font-size: 16px; */
+    }
+
+.picture-img {
+    position: relative;
+    width: 300px;
+    height: 205px;
+    display: flex;
+    /*это позиционирование по верху карточки*/
+    /*align-items: flex-start; */
+    padding: 0px 22px 16px 18px;
+}
+
+.product__preview {
+    max-width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*CSS рамка*/
+.product-info {
+   /* display: flex;
+    flex-wrap: wrap; */
+    color: #000000;
+     /*  z-index: 3; */
+    border: 3px solid #b59f5b;
+    margin: -50px 40px 40px -10px;
+    padding: 20px 20px 20px 20px;
+    width: 310px;
+    /*height: 267px; */
+    text-align: left;
+    opacity: 0.6;
+    /*flex-grow: 1; */
+    /*для автомат растяжки*/
+     }
+
+.product-info:hover {
+    color: #b59f5b;
+    }
+
+.product-name {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 15px;
+    line-height: 24px;
+    /*text-align: left;
+    margin-left: auto;
+    margin-right: auto; */
+    /*добавила*/
+    margin-top: 1.5em;
+    margin-bottom: 0;
+ }
+
+.product-link {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #b59f5b;
+   }
+
+.product-button {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    /*выровнять кнопку с правого края*/
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/*Стили для зачеркутой цены*/
+.product-price {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+ .product-price-no {
+    display: block;
+    margin: 30px 0px 0px -45px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 0.1;
+   }
+
+ /*Стили для обычной цены*/
+ .product-price-toy {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+     margin: auto;
+ }
+
+/* Стили В магазин*/
+.sub-button {
+    min-width: 200px;
+    height: 49px;
+    background-color: #b59f5b;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 20px;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 40px;
+    /*выровнять кнопку с правого края*/
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.sub-button:hover {
+    background-color: #323232;
+}
+
+/*.product-preview::before {
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*position: absolute это ключевая фишка, иначе  бокс растягивается*/
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); */
+
+
   .footer {
     margin: auto;
     width: 1200px;
@@ -829,20 +1000,24 @@ button {
   }
   
   .social-info {
-    margin: 5px 0px 36px 0px;
+   /* margin: 5px 0px 36px 0px;*/
+      display: flex;
+      justify-content: center;
+      background-color: #f4f7f6;
+      padding: 35px 25px 30px 28px;
   }
   
-  .socials-wrapper {
+  /*.socials-wrapper {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     background-color: #f4f7f6;
     padding: 35px 25px 30px 28px;
-  }
+  } */
   
-  .socials:nth-of-type(1n + 2) {
+ /* .socials:nth-of-type(1n + 2) {
     margin-left: 28px;
-  }
+  } */
   
   .socials-link {
     display: block;
@@ -854,18 +1029,21 @@ button {
   }
   
   .socials-link-dribble {
-    background-image: url("/svg/001-dribbble.svg");
-    background-color: #f4f7f6;
-  }
-  
-  .socials-link-pinterest {
-    background-image: url("/svg/002-pinterest.svg");
-    background-color: #f4f7f6;
-  }
-  .socials-link-tumblr {
-    background-image: url("svg/003-tumblr.svg");
-    background-color: #f4f7f6;
-  }
+/*background-image: url("//raw.githubusercontent.com/BuketovaGalina/mqdip/f89450abe81b0e5ee6c5cd180951162967a6738a/svg/001-dribbble.svg"); */
+      background-color: #f4f7f6;
+     }
+
+.socials-link-pinterest {
+ /*background-image: url("//raw.githubusercontent.com/BuketovaGalina/mqdip/f89450abe81b0e5ee6c5cd180951162967a6738a/svg/001-pinterest.svg"); */
+     background-color: #f4f7f6;
+     margin-left: 28px;
+}
+
+.socials-link-tumblr {
+/*background-image: url("//raw.githubusercontent.com/BuketovaGalina/mqdip/f89450abe81b0e5ee6c5cd180951162967a6738a/svg/004-twitter.svg");  */
+background-color: #f4f7f6;
+    margin-left: 28px;
+}
   
   .socials-text {
     position: absolute;
@@ -897,4 +1075,27 @@ button {
       overflow: hidden;
   }
 
-  
+/*PopUp
+
+/*.popup__close {
+    width: 1.4em;
+    height: 1em;
+    font-size: 20px;
+
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+}
+
+.popup__close:before,
+.popup__close:after {
+    width: 1.4em;
+    height: 0.2em;
+}
+
+@media (max-width: 481px) {
+    .popup__close {
+        font-size: 15px;
+    }
+} */
+
