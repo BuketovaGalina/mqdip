@@ -37,8 +37,7 @@ a {
 
 /*image в CSS*/
 .header {
-   background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg.jpg?raw=true");
-    /*background-image: ("../images/banner-bg.jpg"); не подключается выдает ошибку*/
+    background-image: url("./images/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -258,7 +257,7 @@ button {
  /*CSS 641-1199 портрет*/
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
     header {
-        background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg-tablet.jpg?raw=true");
+        background-image: url("./images/banner-bg-tablet.jpg");
     }
 
     .trend  {
@@ -274,7 +273,7 @@ button {
 /*CSS 641-1199 пейзаж*/
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
     header {
-        background-image: url("//BuketovaGalina/mqdip/blob/main/images/banner-bg-tablet.jpg?raw=true");
+        background-image: url("./images/banner-bg-tablet.jpg");
     }
     .trend {
         display: flex;
@@ -289,7 +288,7 @@ button {
 /*CSS до 640 портрет*/
 @media (max-width: 640px) and (orientation: portrait) {
     .header {
-        background-image: url("https://raw.githubusercontent.com/BuketovaGalina/mqdip/main/images/banner-mobile.jpg");
+        background-image: url("./images/banner-mobile.jpg");
     }
 
     .trend {
@@ -311,7 +310,7 @@ button {
 /*CSS до 640 пейзаж*/
 @media (max-width: 640px) and (orientation: landscape) {
     .header {
-        background-image: url("https://raw.githubusercontent.com/BuketovaGalina/mqdip/main/images/banner-mobile.jpg");
+        background-image: url("./images/banner-mobile.jpg");
     }
 
     .trend {
@@ -329,15 +328,14 @@ button {
     gap: 4px;
 }
 
-   .trend-card {
-       display: flex;
+   .trend-card {display: flex;
     position: relative;
     /* width: 410px; */
     min-height: 319px;
     /*width: calc((100% - 120px) / 4);
         /*это позиционирование по низу карточки*/
     align-items: flex-end;
-   /* padding: 0px 22px 16px 18px; */
+   padding: 0px 22px 16px 18px;
 }
 
 .trend-card::before {
@@ -388,16 +386,16 @@ color: #b59f5b;
 
 /*добавила*/
 .trend1 {
-    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend1.jpg?raw=true");
+    background-image: url("./images/trend1.jpg");
     }
 .trend2 {
-    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend2.jpg?raw=true");
+    background-image: url("./images/trend2.jpg");
 }
 .trend3 {
-    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend3.jpg?raw=true");
+    background-image: url("./images/trend3.jpg");
 }
 .trend4 {
-    background-image: url("https://github.com/BuketovaGalina/mqdip/blob/main/images/trend4.jpg?raw=true");
+    background-image: url("./images/trend4.jpg");
 }
 
 .trend-tag {
@@ -443,7 +441,7 @@ color: #b59f5b;
     max-width: 367px;
   }
   
-  /* Style for "Travel"*/
+  /* Style  Travel*/
   .categories ul li a {
     width: 125px;
     color: #b59f5b;
@@ -490,7 +488,7 @@ color: #b59f5b;
     margin-bottom: 48px;
   }
   
-  /* Style for "10 июня*/
+  /* Style 10 июня*/
   .date {
     width: 79px;
     color: #888888;
@@ -503,7 +501,7 @@ color: #b59f5b;
     text-align: left;
   }
   
-  /* Style for "Неизвестный автор" */
+  /* Style Неизвестный автор */
   .author {
     width: 125px;
     color: #000000;
@@ -516,7 +514,7 @@ color: #b59f5b;
     text-align: left;
   }
   
-  /* Style for "Итак, вы в Питере */
+  /* Style Итак, вы в Питере */
   .article-text {
     width: 350px;
     color: #0f0d0e;
@@ -540,7 +538,7 @@ color: #b59f5b;
     display: block;
   }
   
-  /* Style for "Новые посты" */
+  /* Style Новые посты */
   .header-sidebar {
     color: #0f0d0e;
     font-family: "Open Sans", sans-serif;
@@ -552,7 +550,7 @@ color: #b59f5b;
     text-transform: uppercase;
   }
   
-  /* Style for "Полоска под Новые посты" */
+  /* Style Полоска под Новые посты */
   .header-sidebar::after {
     content: "";
     display: block;
@@ -576,7 +574,7 @@ color: #b59f5b;
     transform: translate(2px, 4px);
   }
   
-  /* Style for "14 июня 20" */
+  /* Style  14 июня 20 */
   .article-posts {
     color: #8e8e8e;
     font-size: 12px;
@@ -590,7 +588,7 @@ color: #b59f5b;
     font-family: "Open Sans", sans-serif;
   }
   
-  /* Style for "10 мест */
+  /* Style 10 мест */
   .article-titles a {
     display: block;
     font-family: "Open Sans", sans-serif;
@@ -606,19 +604,18 @@ color: #b59f5b;
     color: #b59f5b;
   }
   
-  /* Style for "Найти..." */
+  /* Style Найти... */
   form.search-box {
     display: flex;
     width: 272px;
     outline: none;
     outline-offset: 0;
-  
     margin: 40px 15px 52px 0px;
   }
   
   .search {
     box-sizing: border-box;
-    border: none;
+    /*border: none; */
     width: 221px;
     height: 49px;
     background-color: #f4f7f6;
@@ -877,10 +874,9 @@ color: #b59f5b;
 
 /*CSS рамка*/
 .product-info {
-   /* display: flex;
-    flex-wrap: wrap; */
+   /*display: flex; */
+  /*  flex-wrap: wrap; */
     color: #000000;
-     /*  z-index: 3; */
     border: 3px solid #b59f5b;
     margin: -50px 40px 40px -10px;
     padding: 20px 20px 20px 20px;
@@ -890,7 +886,7 @@ color: #b59f5b;
     opacity: 0.6;
     /*flex-grow: 1; */
     /*для автомат растяжки*/
-     }
+         }
 
 .product-info:hover {
     color: #b59f5b;
