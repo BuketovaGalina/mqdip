@@ -249,13 +249,12 @@ button {
        }
 
    .trend-card  {
-        /*width: calc((100% - 120px) / 4); */
-       width: 100%;
+       width: 25%;
     }
 }
 
- /*CSS 641-1199 портрет*/
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+ /*CSS 769-1199 портрет*/
+@media (min-width: 769px) and (max-width: 1199px) and (orientation: portrait) {
     header {
         background-image: url("./images/banner-bg-tablet.jpg");
     }
@@ -266,12 +265,12 @@ button {
     }
 
     .trend-card {
-        width: 38%;
+        width: 50%;
     }
 }
 
-/*CSS 641-1199 пейзаж*/
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+/*CSS 769-1199 пейзаж*/
+@media (min-width: 769px) and (max-width: 1199px) and (orientation: landscape) {
     header {
         background-image: url("./images/banner-bg-tablet.jpg");
     }
@@ -281,7 +280,38 @@ button {
     }
 
     trend-card  {
-        width: 50%;
+        width: 25%;
+    }
+}
+
+/*CSS 641-768 портрет*/
+@media (min-width: 641px) and (max-width: 768px) and (orientation: portrait) {
+    header {
+        background-image: url("./images/banner-bg-tablet.jpg");
+    }
+
+    .trend  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .trend-card {
+        width: 46%;
+    }
+}
+
+/*CSS 641-768 пейзаж*/
+@media (min-width: 641px) and (max-width: 768px) and (orientation: landscape) {
+    header {
+        background-image: url("./images/banner-bg-tablet.jpg");
+    }
+    .trend {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    trend-card  {
+        width: 25%;
     }
 }
 
@@ -298,7 +328,7 @@ button {
 
     .trend-card {
         /* width: calc((100%) / 4); */
-        width: 100%;
+        width: 25%;
     }
 
   /*  .main-info {
@@ -318,24 +348,63 @@ button {
         flex-wrap: nowrap;
     }
     .trend-card {
-      width: 42%;
+      width:50%;
+    }
+}
+
+/*CSS до 360 портрет*/
+@media (max-width: 360px) and (orientation: portrait) {
+    .header {
+        background-image: url("./images/banner-mobile.jpg");
+    }
+
+    .trend {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .trend-card {
+        width: 21.6%;
+    }
+
+    /*  .main-info {
+          flex-grow: 1;
+          display: flex;
+      }  */
+}
+
+/*CSS до 360 пейзаж*/
+@media (max-width: 640px) and (orientation: landscape) {
+    .header {
+        background-image: url("./images/banner-mobile.jpg");
+    }
+
+    .trend {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .trend-card {
+        width:50%;
     }
 }
 
 /*=======CSS общие для Тренд========*/
 .trend {
+    width: 100%;
     margin: auto;
     gap: 4px;
 }
 
-   .trend-card {display: flex;
+   .trend-card  {
+       display: flex;
     position: relative;
     /* width: 410px; */
     min-height: 319px;
-    /*width: calc((100% - 120px) / 4);
+    width: calc((100% - 120px) / 4);
+       margin: auto;
         /*это позиционирование по низу карточки*/
     align-items: flex-end;
-   padding: 0px 22px 16px 18px;
+   padding: 0px 18px 16px 18px;
 }
 
 .trend-card::before {
@@ -380,22 +449,36 @@ color: #b59f5b;
     margin-right: auto; */
   }
 
-.trend-card {
+/*.trend-card {
     background-repeat: no-repeat;
-}
+}не нужно, сужает картинку*/
 
 /*добавила*/
 .trend1 {
     background-image: url("./images/trend1.jpg");
+    /*max-width: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     }
 .trend2 {
     background-image: url("./images/trend2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .trend3 {
     background-image: url("./images/trend3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 .trend4 {
     background-image: url("./images/trend4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .trend-tag {
@@ -845,7 +928,8 @@ color: #b59f5b;
     display: flex;
     justify-content: center;
     gap: 20px;
-}
+    align-items: flex-end;
+    }
 
 .product {
     box-sizing: border-box;
