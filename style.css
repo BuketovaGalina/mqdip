@@ -35,7 +35,7 @@ a {
     text-decoration: none;
 }
 
-/*image в CSS*/
+/*===Header===*/
 .header {
     background-image: url("./images/banner-bg.jpg");
     background-repeat: no-repeat;
@@ -45,8 +45,9 @@ a {
     background-color: #000000;
     color: #000000;
     position: relative;
+    height: 455px;
     z-index: 0;
-    padding: 20px 0px 128px 0px;
+    /*padding: 20px 0px 128px 0px; */
     margin-bottom: 60px;
 }
 
@@ -66,25 +67,22 @@ a {
 
 .wrapper {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px;
+}
+.header-top {
     display: flex;
-    /*position: fixed; */
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: space-between;
-    /*margin-left: auto;
-    margin-right: auto; */
+    justify-content: space-around;
     align-items: center;
-         /*border: 5px solid red; */
-    padding: 20px 80px 20px 80px;
+    padding-top: 36px;
 }
 
 .logo {
     width: 179px;
     position: relative;
     z-index: 3;
-    /*height: 41px; */
-}
-
+   }
 
 .menu {
     display: flex;
@@ -114,7 +112,7 @@ a {
 }
 
  .menu-list {
-    display: flex;
+    /*display: flex; */
     width: 462px;
     color: #ffffff;
     font-family: "Open Sans", sans-serif;
@@ -132,15 +130,13 @@ a {
      color: #ffffff;
      position: relative;
      font-family: "Open Sans", sans-serif;
-     padding-top: 110px;
+    /* padding-top: 120px; */
      font-size: 42px;
      font-weight: 700;
      font-style: normal;
      letter-spacing: normal;
      line-height: 1.7;
      text-align: center;
-     /*margin-left: auto;
-     margin-right: auto; */
      margin: auto;
      text-transform: uppercase;
      z-index: 3;
@@ -164,7 +160,7 @@ a {
     background-color: #b59f5b;
     width: 66px;
     height: 3px;
-    margin: 10px auto 35px auto;
+    margin: 10px auto 25px auto;
 }
 
 /*===Тренд===*/
@@ -179,15 +175,12 @@ a {
 
    .trend-card  {
        display: flex;
-       /*width: 25%; */
-    position: relative;
-    /* width: 410px; */
-    min-height: 319px;
-    width: calc((100% - 120px) / 4);
+       position: relative;
+       height: 303px;
+       width: calc((100% - 120px) / 4);
        margin: auto;
-        /*это позиционирование по низу карточки*/
-    align-items: flex-end;
-   padding: 0px 18px 16px 18px;
+       align-items: flex-end;
+       padding: 0px 18px 16px 18px;
 }
 
 .trend-card::before {
@@ -196,8 +189,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    /*position: absolute это ключевая фишка, иначе бокс растягивается*/
-   position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -219,18 +211,12 @@ color: #b59f5b;
 }
 
 .trend-name {
-    /*width: 300px; */
-    /*color: #ffffff;
-    font-family: "Open Sans", sans-serif; */
     text-transform: uppercase;
     font-size: 20px;
     /*font-weight: 700; */
     padding-right: 15px;
     line-height: 24px;
-    /*text-align: left;
-    margin-left: auto;
-    margin-right: auto; */
-  }
+       }
 
  .trend1 {
     background-image: url("./images/trend1.jpg");
@@ -314,10 +300,11 @@ color: #b59f5b;
     text-align: left;
     text-transform: uppercase;
   }
-  
+
+/*===категории в 1 строку===*/
   .categories ul {
     display: flex;
-  } /* категории в 1 строку*/
+  }
   
   .categories ul li:nth-of-type(1n + 2) {
     margin-left: 18px;
@@ -362,7 +349,7 @@ color: #b59f5b;
     text-align: left;
   }
   
-  /* Style Неизвестный автор */
+  /*===Неизвестный автор===*/
   .author {
     width: 125px;
     color: #000000;
@@ -427,7 +414,7 @@ color: #b59f5b;
     margin-bottom: 20px;
   }
   
-  /*===for картинки===*/
+  /*===картинки===*/
   .article-pictures {
     width: 70px;
     margin-right: 20px;
@@ -546,7 +533,7 @@ color: #b59f5b;
   /*===Ваш email===*/
   .email {
     font-family: "Open Sans", sans-serif;
-    box-sizing: border-box; /*прямоугольник*/
+    box-sizing: border-box;
     border: none;
     max-width: 271px;
     height: 49px;
@@ -573,7 +560,6 @@ color: #b59f5b;
     background-repeat: no-repeat;
     background-position: center;
     border: none;
-    /* background-image: url(""); */
     background-size: 20px;
     vertical-align: middle;
     color: #ffffff;
@@ -682,19 +668,32 @@ color: #b59f5b;
 
   /*===Products===*/
 .products {
-    margin-top: 68px;
+    margin-top: 0px;
     margin-bottom: 80px;
    }
 
-.products-title {
-    text-align: center;
+ .product-title {
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
     font-weight: 700;
+    margin-bottom: 3px;
+   line-height: 29px;
+    text-align: center;
 }
 
- .products-wrapper {
+ /*===Полоска под Наши изделия===*/
+.product-title::after {
+    content: "";
+    display: block;
+    background-color: #b59f5b;
+    width: 66px;
+    height: 3px;
+    margin: 10px auto 25px auto;
+    text-align: center;
+}
+
+  .products-wrapper {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -730,6 +729,9 @@ color: #b59f5b;
     color: #0f0d0e;
     font-weight: 700;
     margin-bottom: 3px;
+    padding-top: 20px;
+    line-height: 29px;
+    text-align: left;
 }
 
 .products-description {
@@ -788,7 +790,7 @@ color: #b59f5b;
     justify-content: center;
     margin: 0 auto;
     background-color: #f4f7f6;
-    padding: 35px 25px 30px 28px;
+    padding: 5px 25px 30px 28px;
   }
   
  .socials:nth-of-type(1n + 2) {
@@ -849,7 +851,7 @@ color: #b59f5b;
       overflow: hidden;
   }
 
-/*===Медиа для Тренд===*/
+/*===Медиа===*/
 /*===769-1199 портрет 2 карточки===*/
 @media (min-width: 769px) and (max-width: 1199px) and (orientation: portrait) {
         .trend  {
@@ -953,7 +955,6 @@ color: #b59f5b;
     .trend-card {
         width: 100%;
     }
-
      }
 
 /*===до 360 пейзаж 2 карточки===*/
@@ -985,9 +986,9 @@ color: #b59f5b;
         height: 3px;
         width: 30px;
         background-color: #ffffff;
-        left: 5px;
-        color: red;
-    }
+        left: 15px;
+        top: -65px;
+             }
 
     .burger-dash:nth-child(1) {
         transform: translateY(5px);
@@ -1028,7 +1029,7 @@ color: #b59f5b;
     .burger-link:hover {
         text-decoration: underline;
     }
-    .menu {
+  .menu {
         display: none;
     }
 
@@ -1037,34 +1038,36 @@ color: #b59f5b;
     }
 }
 
- /*.header-burger:active  {
-
-    .burger-dash:nth-child(1) {
-        transform: rotate(-45deg);
-    }
-
-    .burger-dash:nth-child(2) {
-        transform: rotate(45deg);
-    }
-
-    .burger-dash:nth-child(3) {
-        display: none;
-    }
-} */
-
-
 /*===Прячем меню бургер===*/
-*@media (max-width: 1200px) {
-    .header-burger {
+*@media (min-width: 1200px) {
+    .burger-hidden .burger-list .burger-list-item {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+   /* .header-burger {
+        display: none;
+           }
+    .burger-menu {
         display: none;
     }
-    .burger-menu {
+    .burger-list {
         display: none;
     }
     .burger-list-item {
         display: none;
     }
-}
+        .burger-link  {
+            display: none;
+        }
+} */
 
 /*===PopUp===*/
 .popup {
@@ -1144,12 +1147,7 @@ color: #b59f5b;
     color: #000;
 }
 
-  /*.form-item-option {
-    font-size: 13px;
-    color: #000;
-  } */
-
-/***Вы подписаны на email рассылку***/
+ /***Вы подписаны на email рассылку***/
   .form-radio-wrap {
     display: flex;
     margin: 10px 0 0 0;
@@ -1201,7 +1199,7 @@ color: #b59f5b;
     flex-direction: column;
   }
 
-.your-message: {
+.your-message  {
     resize: none;
     height: 130px;
     background-color: #f4f7f6;
@@ -1209,11 +1207,10 @@ color: #b59f5b;
     border: none;
     margin: 10px 0 0 0;
     transition: ease 0.2s;
-  }
+   }
 
   .your-message:focus {
     outline: 1px solid #b59f5b;
-
   }
 
   .form-button {
@@ -1240,13 +1237,17 @@ color: #b59f5b;
     display: none;
   }
 
-.popUp-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(1px, 1px, 1px, 1px);
-}
-
+  /*===Скрываем PopUp===*/
+ .popUp-hidden {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     padding: 0;
+     border: 0;
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+ }
 
 
 
