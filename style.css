@@ -903,7 +903,7 @@ color: #b59f5b;
         background-image: url("./images/banner-mobile.jpg");
           }
 
-    .header_burger {
+    .header-burger {
         display: block;
     }
 
@@ -916,14 +916,16 @@ color: #b59f5b;
     }
 
     .title {
-        font-size: 1.6em;
-        margin: 1% 1% 1% 5%;
+        font-size: 20px;
+        margin: 10% 10% 0% 10%;
         line-height: 1.5;
     }
 
      .trend  {
         display: flex;
         flex-wrap: wrap;
+        margin-top: -31px;
+
     }
 
     .trend-card {
@@ -968,7 +970,7 @@ color: #b59f5b;
         background-image: url("./images/banner-mobile.jpg");
     }
 
-    .header_burger {
+    .header-burger {
         display: block;
     }
 
@@ -981,8 +983,8 @@ color: #b59f5b;
     }
 
     .title {
-        font-size: 1.6em;
-        margin: 1% 1% 1% 15%;
+        font-size: 20px;
+        margin: 10% 15% 1% 15%;
         line-height: 1.5;
     }
 
