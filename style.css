@@ -850,51 +850,16 @@ color: #b59f5b;
   }
 
 /*===Медиа===*/
-/*===769-1199 портрет 2 карточки===*/
-@media (min-width: 769px) and (max-width: 1199px) and (orientation: portrait) {
+/*===641-1199 портрет 2 карточки===*/
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
     .header {
         background-image: url("./images/banner-bg-tablet.jpg");
     }
-        .trend  {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
+
+    .menu-list {
+        display: none;
     }
 
-    .trend-card {
-        width: 45%;
-    }
-    .main-info {
-        width: 51.5%;
-        margin: 0px 4.5%;
-    }
-}
-
-/*===769-1199 пейзаж 4 карточки===*/
-@media (min-width: 769px) and (max-width: 1199px) and (orientation: landscape) {
-    .header {
-        background-image: url("./images/banner-bg-tablet.jpg");
-    }
-    .trend  {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 4px;
-    }
-
-    .trend-card {
-        width: 24%;
-    }
-    .main-info {
-        width: 51.5%;
-        margin: 0px 4.5%;
-    }
-}
-
-/*===641-768 портрет 2 карточки===*/
-@media (min-width: 641px) and (max-width: 768px) and (orientation: portrait) {
-    .header {
-        background-image: url("./images/banner-bg-tablet.jpg");
-    }
     .trend  {
         display: flex;
         flex-wrap: wrap;
@@ -902,28 +867,8 @@ color: #b59f5b;
     }
 
     .trend-card {
-        width: 45%;
-    }
-    .main-info {
-        width: 51.5%;
-        margin: 0px 4.5%;
-    }
- }
-
-/*===641-768 пейзаж 4 карточки===*/
-@media (min-width: 641px) and (max-width: 768px) and (orientation: landscape) {
-    .header {
-        background-image: url("./images/banner-bg-tablet.jpg");
-    }
-
-    .trend  {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 4px;
-    }
-
-    .trend-card {
-        width: 24%;
+       /* width: 45%; */
+        width: calc((100% / 2) - 5px);
     }
 
     .main-info {
@@ -932,11 +877,50 @@ color: #b59f5b;
     }
 }
 
-/*===361-640 портрет 1 карточка===*/
-@media (min-width: 361px) and (max-width: 640px) and (orientation: portrait) {
+/*===641-1199 пейзаж 4 карточки===*/
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    .header {
+        background-image: url("./images/banner-bg-tablet.jpg");
+    }
+    .trend  {
+        display: flex;
+        /*flex-wrap: nowrap; */
+             }
+
+    .trend-card {
+        width: calc(100% / 4);
+           }
+
+    .main-info {
+        width: 51.5%;
+        margin: 0px 4.5%;
+    }
+}
+
+ /*===маx-640 портрет 1 карточка===*/
+@media (max-width: 640px) and (orientation: portrait) {
     .header {
         background-image: url("./images/banner-mobile.jpg");
           }
+
+    .header_burger {
+        display: block;
+    }
+
+    .header-wrapper {
+        padding-bottom: 0;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .title {
+        font-size: 1.6em;
+        margin: 1% 1% 1% 5%;
+        line-height: 1.5;
+    }
+
      .trend  {
         display: flex;
         flex-wrap: wrap;
@@ -944,41 +928,42 @@ color: #b59f5b;
 
     .trend-card {
         width: 100%;
-    }
-}
-
-/*===361-640 портрет 1 карточка===*/
-@media (min-width: 361px) and (max-width: 640px) and (orientation: landscape) {
-    .header {
-        background-image: url("./images/banner-mobile.jpg");
+        margin-bottom: 1%;
     }
 
-    .header_burger {
+    /*Left-Right================*/
+    .container {
+        flex-wrap: wrap;
+        margin-top: 7%;
+    }
+
+    .main-info {
+        width: 100%;
+    }
+
+    .posts {
         display: block;
+        margin: 0 5%;
     }
 
-    .header-wrapper {
-        padding-bottom: 0;
-    }
-    .menu-list {
-        display: none;
+    .sidebar {
+        margin: 0 5%;
+        width: 100%;
     }
 
-    .header_burger {
-        margin: -18px 10px 0 0;
-    }
-
-    .trend  {
+    .products-wrapper {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .trend-card {
+    .products-card {
         width: 100%;
-    }
+        margin: 5% 5% 5% 5%;
+                    }
 }
-/*===640 пейзаж 2 карточки===*/
-@media (min-width: 361px) and (max-width: 640px) and (orientation: landscape) {
+
+/*===max 640 пейзаж 2 карточки========================*/
+@media (max-width: 640px) and (orientation: landscape) {
     .header {
         background-image: url("./images/banner-mobile.jpg");
     }
@@ -993,6 +978,12 @@ color: #b59f5b;
 
     .menu-list {
         display: none;
+    }
+
+    .title {
+        font-size: 1.6em;
+        margin: 1% 1% 1% 15%;
+        line-height: 1.5;
     }
 
     .header_burger {
@@ -1002,77 +993,16 @@ color: #b59f5b;
       .trend  {
         display: flex;
         flex-wrap: wrap;
-        gap: 4px;
-    }
-    .trend-card {
-        width: 46%;
-    }
-}
-
-/*===до 360 портрет 1 карточка===*/
-@media (max-width: 360px) {
-    .header {
-        background-image: url("./images/banner-mobile.jpg");
-    }
-    .header_burger {
-        display: block;
-    }
-
-    .header-wrapper {
-        padding-bottom: 0;
-    }
-
-    .menu-list {
-        display: none;
-    }
-
-    .header_burger {
-        margin: -18px 10px 0 0;
-    }
-
-  .trend {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .trend-card {
-        width: 100%;
-    }
-     }
-
-/*===до 360 пейзаж 2 карточки===*/
-@media (max-width: 360px) {
-    .header {
-        background-image: url("./images/banner-mobile.jpg");
-    }
-
-    .header_burger {
-        display: block;
              }
 
-    .header-wrapper {
-        padding-bottom: 0;
-    }
-
-    .menu-list {
-        display: none;
-    }
-
-    .header_burger {
-        margin: -18px 10px 0 0;
-    }
-
-     .trend {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
     .trend-card {
-        width: 50%;
+       width: 44%;
+        /*width: calc(100% / 2); */
+       margin-bottom: 1%;
     }
 }
 
-/**===Бургер меню===*/
+/**===Бургер меню=====================*/
 @media (max-width: 1199px) {
     .header-burger {
         position: relative;
@@ -1321,7 +1251,7 @@ color: #b59f5b;
      border: 0;
      clip: rect(0 0 0 0);
      overflow: hidden;
- } 
+ }
 
 
 
