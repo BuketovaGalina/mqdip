@@ -1526,7 +1526,7 @@ form.search__box {
     .trends {
         display: flex;
         flex-wrap: wrap;
-    }
+           }
 
     .trends__title {
         margin-top: 48px;
@@ -1539,6 +1539,7 @@ form.search__box {
 
     .trends__container-card {
         flex-wrap: wrap;
+        max-height: 1100px;
     }
 
     .trend__card {
@@ -1553,6 +1554,7 @@ form.search__box {
     .main__sidebar {
         margin: auto;
         flex-wrap: wrap;
+        margin-top: 120px;
     }
 
     .main {
@@ -1567,6 +1569,7 @@ form.search__box {
     .main__post-info {
         width: 100%;
         line-height: 1.5;
+        margin-top: 10px;
     }
 
     .post__title a {
