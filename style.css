@@ -767,7 +767,6 @@ form.search__box {
 
 /*===Products===*/
 .products {
-     display: flex;
     max-width: 1170px;
     margin: auto;
     padding-bottom: 30px;
@@ -854,7 +853,7 @@ form.search__box {
     flex-direction: column;
     flex-grow: 1;
     justify-content: flex-end;
-                   }
+}
 
 .product__title {
     font-family: "Open Sans", sans-serif;
@@ -915,7 +914,7 @@ form.search__box {
 }
 
 .footer__container {
-    max-width: 1170px;
+    width: 100%;
     margin: auto;
 }
 
@@ -1149,7 +1148,7 @@ form.search__box {
     }
 
     .main {
-       max-width: 53%;
+        max-width: 53%;
         margin-left: 15px;
         margin-right: 0px;
     }
@@ -1209,7 +1208,7 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-             }
+    }
 
     .product__card {
         width: calc((100% - (65px * 2)) / 2);
@@ -1230,12 +1229,12 @@ form.search__box {
 
 
     .social__info {
-        max-width: 1170px;
-            }
+        width: 100%;
+    }
 
     .socials__wrapper {
-        max-width: 1170px;
-                margin: auto;
+        width: 100%;
+        margin: auto;
     }
 }
 
@@ -1350,12 +1349,12 @@ form.search__box {
     }
 
     .trends {
-                display: flex;
+        display: flex;
         flex-wrap: wrap;
     }
 
     .trends__title {
-                font-size: 1.1em;
+        font-size: 1.1em;
     }
 
     .trends__title:after {
@@ -1385,7 +1384,7 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-             }
+    }
 
     .product__card {
         width: calc((100% - (65px * 2)) / 2);
@@ -1582,7 +1581,7 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-             }
+    }
 
 
     .product__card {
@@ -1600,11 +1599,11 @@ form.search__box {
 
     .social__info {
         max-width: 640px;
-          }
+    }
 
     .socials__wrapper {
         max-width: 640px;
-                 margin: auto;
+        margin: auto;
     }
 }
 
@@ -1755,7 +1754,7 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-             }
+    }
 
     .product__card {
         width: calc((100% - (65px * 2)) / 2);
