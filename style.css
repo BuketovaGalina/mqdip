@@ -393,7 +393,6 @@ a {
 }
 
 /*===10 мест, слева===*/
-
 .post__title {
     display: flex;
     width: 330px;
@@ -767,7 +766,7 @@ form.search__box {
 
 /*===Products===*/
 .products {
-   /* width: 100%; */
+    /* width: 100%; */
     max-width: 1200px;
     margin: auto;
     padding-bottom: 30px;
@@ -805,8 +804,9 @@ form.search__box {
     justify-content: space-between;
     width: 100%;
     flex-wrap: nowrap;
-    /*margin-left: 30px; */
-    margin-right: 15px;
+    margin-left: 26px;
+    margin-right: 26px;
+    gap: 26px;
 }
 
 .products__card::before {
@@ -829,13 +829,13 @@ form.search__box {
     flex-direction: column;
     position: relative;
     max-height: 460px;
-    width: calc((100% - (65px * 2)) / 3);
-    margin: 0 auto;
-    /*padding: 1% 1% 1% 1%; */
+    width: calc(100% / 3);
+    margin-left: 26px;
+    margin-right: 26px;
 }
 
 .product__img {
-    max-width: 300px;
+    width: 300px;
     text-align: center;
     background-repeat: no-repeat;
 }
@@ -851,8 +851,8 @@ form.search__box {
     flex-direction: column;
     flex-grow: 1;
     justify-content: flex-end;
-    margin-left: 15px;
-    margin-right: 70px;
+    margin-left: 10px;
+    margin-right: 45px;
 }
 
 .product__title {
@@ -910,11 +910,13 @@ form.search__box {
 }
 
 .footer {
-    margin-top: 23px;
+    height: 83px;
+    margin-top: 61px;
 }
 
 .footer__container {
     width: 100%;
+    height: 83px;
     margin: auto;
 }
 
@@ -969,15 +971,22 @@ form.search__box {
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-.copyright {
+/*.copyright {
     width: 218px;
+    height:14px;
     text-align: center;
     margin: auto;
     padding-top: 54px;
-}
+} */
 
 .copyright a {
-    margin-bottom: 41px;
+    display: flex;
+    width: 218px;
+    height: 14px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 41px;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #999999;
@@ -1210,9 +1219,7 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-        margin-left: 30px;
-        margin-right: 30px;
-
+        margin-bottom: 20px;
     }
 
     .product__card {
@@ -1222,21 +1229,16 @@ form.search__box {
 
     .product__card:nth-child(1n+3) {
         flex-wrap: wrap;
-        margin: 60px 0;
-        padding-left: 30px;
+        margin: 60px 20px;
     }
 
     .product__img {
-        max-width: 292px;
+        width: 292px;
         height: 227px;
     }
 
     .product__info {
-        outline-offset: 16px;
-    }
-
-    .footer {
-        margin-top: -30px;
+        margin-right: 15px;
     }
 
     .social__info {
@@ -1247,10 +1249,6 @@ form.search__box {
         width: 100%;
         margin: auto;
     }
-}
-
-.copyright {
-    padding-top: 45px;
 }
 
 /*===641-1200 Таблет пейзаж Тренд 4 карточки===*/
@@ -1412,8 +1410,6 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-        margin-left: 30px;
-        margin-right: 30px;
     }
 
     .product__card {
@@ -1423,20 +1419,12 @@ form.search__box {
 
 
     .product__img {
-        max-width: 292px;
+        width: 292px;
         height: 227px;
-    }
-
-    .product__info {
-        outline-offset: 16px;
     }
 
     .footer {
         margin: 5% 5%;
-    }
-
-    .copyright {
-        padding-top: 45px;
     }
 }
 
@@ -1642,7 +1630,11 @@ form.search__box {
     }
 
     .product__info {
-        outline-offset: 16px;
+        margin-right: 10px;
+    }
+
+    .footer {
+      margin: 0 auto;
     }
 
     .social__info {
@@ -1819,10 +1811,6 @@ form.search__box {
     .product__img {
         max-width: 285px;
         height: 285px;
-    }
-
-    .product__info {
-        outline-offset: 16px;
     }
 
     .social__info {
