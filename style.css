@@ -75,14 +75,16 @@ a {
 .header__menu {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0 auto;
     max-width: 1200px;
     padding-top: 45px;
+    padding-left: 15px;
     padding-bottom: 12px;
-    /* position: relative; */
 }
+
+/* .header__logo {
+       width: 158px;
+   } */
 
 .logo {
     width: 179px;
@@ -168,7 +170,7 @@ a {
 
 /*===h1===*/
 .header__container {
-    display: flex;
+    /*display: flex; */
     width: 47%;
     margin: auto;
     position: relative;
@@ -192,7 +194,8 @@ a {
 .trends {
     position: relative;
     width: 100%;
-    margin: auto;
+    /*margin: auto; */
+    margin-bottom: 60px;
 }
 
 .trends__container {
@@ -336,17 +339,17 @@ a {
 /*===Left-Right===*/
 .main__sidebar {
     display: flex;
-    max-width: 1170px;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto 0 auto;
+    justify-content: space-between;
 }
 
 /*===Left===*/
 .main {
-    width: calc(100% / 3 * 2);
+    /* width: calc(100% / 3 * 2); */
+    width: calc(100% - 272px);
     margin-right: auto;
     margin-left: auto;
 }
@@ -373,6 +376,7 @@ a {
 .categories ul li a {
     width: 125px;
     color: #b59f5b;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: 700;
     font-style: normal;
@@ -460,21 +464,20 @@ a {
     text-align: left;
 }
 
-/*===Right===*/
+/*===Right десктор===*/
 .sidebar {
-    width: calc(100% / 3);
-    margin-left: 11%;
+    width: 272px;
+    margin-left: auto;
+    /* margin-left: 11%; */
     margin-right: auto;
-    margin-top: 0;
 }
 
 .new__posts {
     text-align: left;
     display: block;
-    width: 100%;
+    margin-top: -10px;
 }
 
-/*===Новые посты===*/
 .header__sidebar {
     color: #0f0d0e;
     font-family: "Open Sans", sans-serif;
@@ -484,6 +487,7 @@ a {
     line-height: 24px;
     text-align: center;
     text-transform: uppercase;
+    padding-top: 0;
 }
 
 /*===Полоска под Новые посты===*/
@@ -769,9 +773,12 @@ form.search__box {
 
 /*===Products===*/
 .products {
-    max-width: 1170px;
-    margin: auto;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 30px;
+    margin: 0 auto 0 auto;
+    /*justify-content: space-between; */
 }
 
 .products__container {
@@ -806,9 +813,9 @@ form.search__box {
     justify-content: space-between;
     width: 100%;
     flex-wrap: nowrap;
-   margin-left: 10px;
-    margin-right: 10px;
-        gap: 26px;
+    /*  margin-left: 10px;
+      margin-right: 10px; */
+    gap: 26px;
 }
 
 .products__card::before {
@@ -912,23 +919,29 @@ form.search__box {
 }
 
 .footer {
-    height: 83px;
-    margin-top: 61px;
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column;
+    padding: 61px 15px 0 15px;
+    align-items: center;
+    margin-left: 60px;
 }
 
-.footer__container {
-    width: 100%;
-    height: 83px;
-    margin: auto;
-}
+/*.footer__container {*/
+/*    width: 100%;*/
+/*height: 83px; */
+/*margin: auto;*/
+/*}*/
 
 .social__info {
     width: 100%;
     background-color: #f4f7f6;
     padding-top: 38px;
     padding-bottom: 27px;
+    margin: 0 auto 0 auto;
 }
 
+/*Иконки в 1 строку*/
 .socials__wrapper {
     display: flex;
     justify-content: center;
@@ -982,12 +995,12 @@ form.search__box {
 } */
 
 .copyright a {
-    display: flex;
-    width: 218px;
-    height: 14px;
+    /*  display: flex; */
+    /* width: 218px;
+     height: 14px; */
     text-align: center;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 35px;
     padding-bottom: 41px;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -1103,12 +1116,11 @@ form.search__box {
         text-decoration: underline;
     }
 
-    .header__logo {
-        width: 158px;
-    }
-
+    /* .header__logo {
+         width: 158px;
+     } */
     .header__container {
-        display: flex;
+        /* display: flex; */
         width: 90%;
         font-size: 16px;
         padding: 80px 20px 10px 20px;
@@ -1156,12 +1168,12 @@ form.search__box {
         margin-top: 20px;
     }
 
-    .main {
-        max-width: 53%;
-        margin-left: 15px;
-        margin-right: 0;
-    }
-
+    /*  .main {
+         /* max-width: 53%;
+          width: calc(100% - 400px - (15px*2));
+        /*  margin-left: 15px;
+          margin-right: 0;
+      } */
     .main__post {
         flex-wrap: wrap;
         width: 100%;
@@ -1174,7 +1186,7 @@ form.search__box {
         margin-left: 0;
     }
 
-    /* Style for "10 мест, р" */
+    /* Style for "10 мест... Справа  */
     .post__title a {
         width: 281px;
         height: 36px;
@@ -1191,8 +1203,8 @@ form.search__box {
 
     .sidebar {
         width: calc(100% / 2.6);
-        margin-left: 10px;
-        margin-right: 15px;
+        /* margin-left: 10px;
+         margin-right: 15px; */
     }
 
     .products {
@@ -1217,9 +1229,9 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-        margin-bottom: 20px;
-        padding-left: 10px;
-        padding-right: 38px;
+        /* margin-bottom: 20px;
+         padding-left: 10px;
+         padding-right: 38px; */
     }
 
     .product__card {
@@ -1243,6 +1255,10 @@ form.search__box {
 
     .social__info {
         width: 100%;
+    }
+
+    .footer {
+        margin-left: 0;
     }
 
     .socials__wrapper {
@@ -1345,7 +1361,7 @@ form.search__box {
     }
 
     .header__container {
-        display: flex;
+        /* display: flex; */
         width: 90%;
         margin: 60px auto;
         padding: 20px 20px 20px 20px;
@@ -1389,6 +1405,7 @@ form.search__box {
     }
 
     .sidebar {
+        width: 272px;
         margin-left: 0;
     }
 
@@ -1539,7 +1556,7 @@ form.search__box {
     }
 
     .header__container {
-        display: flex;
+        /* display: flex; */
         width: 90%;
         margin-top: 18px;
         margin-left: auto;
@@ -1556,6 +1573,7 @@ form.search__box {
     .trends {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 0;
     }
 
     .trends__title {
@@ -1583,7 +1601,7 @@ form.search__box {
 
     .main__sidebar {
         flex-wrap: wrap;
-        margin-top: 290px;
+        margin-top: 180px;
     }
 
     .main {
@@ -1618,8 +1636,9 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-        margin-left: 30px;
-        margin-right: 30px;
+        /*   margin-left: 30px; */
+        /*  gap: 52px; */
+        /* margin-right: 30px; */
     }
 
 
@@ -1639,18 +1658,14 @@ form.search__box {
     }
 
     .footer {
-        margin: 0 auto;
-    }
-
-    .social__info {
-        max-width: 640px;
+        margin-left: 0;
     }
 
     .socials__wrapper {
-        max-width: 640px;
+        width: 100%;
         margin: auto;
     }
-}
+    }
 
 /*===max 640 пейзаж Тренд 2 карточки===*/
 @media (max-width: 640px) and (orientation: landscape) {
@@ -1758,6 +1773,7 @@ form.search__box {
     .trends {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 20px;
     }
 
     .trends__title {
@@ -1809,8 +1825,8 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
-        margin-left: 30px;
-        margin-right: 30px;
+        /*   margin-left: 30px;
+           margin-right: 30px; */
     }
 
     .product__card {
