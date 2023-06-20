@@ -852,6 +852,7 @@ form.search__box {
     justify-content: flex-end;
     margin-left: 24px;
     margin-right: 24px;
+    margin-top: -15px;
 }
 
 .product__title {
@@ -1191,10 +1192,9 @@ form.search__box {
         flex-wrap: wrap;
     }
 
-    .product__card {
-        width: calc((100% - (76px * 2)) / 2);
-
-    }
+    /*.product__card {*/
+    /*    width: calc((100% - (76px * 2)) / 2);*/
+    /*}*/
 
     .product__card:nth-child(1n+3) {
         flex-wrap: wrap;
@@ -1350,9 +1350,9 @@ form.search__box {
         flex-wrap: wrap;
     }
 
-    .product__card {
-        width: calc((100% - (76px * 2)) / 2);
-    }
+    /*.product__card {*/
+    /*    width: calc((100% - (76px * 2)) / 2);*/
+    /*}*/
 
     .product__card:nth-child(1n+3) {
         flex-wrap: wrap;
