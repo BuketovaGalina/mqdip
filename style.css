@@ -770,6 +770,8 @@ form.search__box {
 /*===Products===*/
 .products {
     max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto 0 auto;
 }
 
@@ -779,7 +781,6 @@ form.search__box {
     /*width: 100%; */
     padding-left: 15px;
     padding-right: 15px;
-    /*padding-bottom: 30px; */
 }
 
 .products__title {
@@ -807,10 +808,12 @@ form.search__box {
 /*Карточки products*/
 .products__container-card {
     display: flex;
-    justify-content: space-between;
     /*width: 100%; */
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .products__card::before {
@@ -834,7 +837,7 @@ form.search__box {
     align-items: center;
 }
 
-.product__img {
+.product__img  {
     text-align: center;
     background-repeat: no-repeat;
     height: 204px;
@@ -856,7 +859,8 @@ form.search__box {
     justify-content: flex-end;
     margin-left: 24px;
     margin-right: 24px;
-    margin-top: -15px;
+    /*margin-top: -15px;*/
+    color: #0f0d0e;
 }
 
 .product__title {
@@ -871,11 +875,24 @@ form.search__box {
     text-align: left;
 }
 
+.product__description-card1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
 .product__description {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
+}
+
+.product__link-card1 {
+    color: #d3c59d;
+    font-weight: 700;
 }
 
 .product__link {
@@ -928,7 +945,7 @@ form.search__box {
 .social__info {
     max-height: 83px;
     flex-wrap: nowrap;
-    /*width: 100%;*/
+    width: 100%;
     background-color: #f4f7f6;
     padding-top: 38px;
     padding-bottom: 27px;
@@ -988,7 +1005,7 @@ form.search__box {
     line-height: 40px;
     max-width: 1200px;
     margin: 0 auto 0 auto;
-    padding-top: 140px;
+    padding-top: 40px;
 }
 
 .visually-hidden {
@@ -1170,15 +1187,32 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .product__card {
         width: calc(100% / 2 - 52px);
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
 
-    .product__img {
+    .product__img  {
         height: 227px;
+        width: calc(100% - 48px);
+        /*width: 100%;*/
+    }
+
+    .product__preview {
+        height: 227px;
+        width: calc(100% - 48px);
+        /*width: 100%;*/
+    }
+
+    .product__info {
+        /*margin: 0 auto 0 auto;*/
+        margin-bottom: 40px;
+        /*max-width: 340px;*/
     }
 
     .social__info {
@@ -1299,7 +1333,7 @@ form.search__box {
     }
 
     .sidebar {
-        margin-left: 0;
+        margin-right: 0;
     }
 
     .main__post-images {
@@ -1316,15 +1350,32 @@ form.search__box {
 
     .products__container-card {
         flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .product__card {
         width: calc(100% / 2 - 52px);
-        margin-bottom: 60px;;
+        margin-bottom: 80px;;
     }
 
-    .product__img {
+    .product__img  {
         height: 227px;
+        width: calc(100% - 48px);
+/*width: 100%;*/
+    }
+
+    .product__preview  {
+        height: 227px;
+        width: calc(100% - 48px);
+        /*width: 100%;*/
+    }
+
+    .product__info {
+        /*margin: 0 auto 0 auto;*/
+        margin-bottom: 40px;
+        /*max-width: 340px;*/
     }
 
     .footer {
@@ -1464,7 +1515,7 @@ form.search__box {
 
     .main__post {
         flex-wrap: wrap;
-             }
+    }
 
     .main__post-info {
         width: 100%;
@@ -1493,11 +1544,24 @@ form.search__box {
 
     .product__card {
         width: 100%;
-        margin-bottom: 80px;
-        margin-top: 60px;
+        /*margin-bottom: 80px;*/
+        /*margin-top: 80px;*/
+
+
+        margin-bottom: 15%;
+        margin-left: 9px;
+        margin-right: 15px;
     }
 
     .product__img {
+        /*width: calc(100% - 48px);*/
+        width: 100%;
+        height: 285px;
+    }
+
+    .product__preview {
+        /*width: calc(100% - 48px);*/
+        width: 100%;
         height: 285px;
     }
 
@@ -1665,12 +1729,14 @@ form.search__box {
 
     .product__card {
         width: 100%;
-        margin-bottom: 80px;
-        margin-top: 60px;
+        margin-bottom: 15%;
+        margin-left: 9px;
+        margin-right: 15px;
     }
 
-    .product__img {
-        /*  max-width: 285px; */
+    .product__img .product__preview {
+        /*width: calc(100% - 48px);*/
+        width: 100%;
         height: 285px;
     }
 
