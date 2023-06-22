@@ -20,10 +20,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -38,13 +34,6 @@ a {
     text-decoration: none;
 }
 
-.page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-
 .header {
     background-image: url("./images/banner-bg.jpg");
     background-repeat: no-repeat;
@@ -55,7 +44,8 @@ a {
     margin-bottom: 60px;
     text-transform: uppercase;
     width: 100%;
-    padding-bottom: 130px;
+    padding-bottom: 105px;
+    /*top: -100px;*/
 }
 
 .header::after {
@@ -78,7 +68,7 @@ a {
     align-items: center;
     margin: 0 auto 0 auto;
     max-width: 1200px;
-    padding-top: 45px;
+    padding-top: 126px;
     padding-left: 15px;
     padding-bottom: 12px;
 }
@@ -164,7 +154,7 @@ a {
     margin: auto;
     position: relative;
     z-index: 3;
-    padding: 118px 20px 10px 20px;
+    padding: 96px 20px 10px 20px;
 }
 
 .header__title {
@@ -175,13 +165,12 @@ a {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
     overflow: hidden;
 }
 
 /*Сейчас в тренде */
 .trends {
-    /* position: relative; */
     width: 100%;
     margin-bottom: 60px;
 }
@@ -220,8 +209,8 @@ a {
 
 .trends__container-card {
     display: flex;
-    /*width: 100%;*/
-    max-height: 348px;
+    width: 100%;
+    /*max-height: 348px;*/
     flex-wrap: nowrap;
 }
 
@@ -246,7 +235,7 @@ a {
     width: calc((100% - (4px * 3)) / 4);
     align-items: flex-end;
     margin: auto;
-    padding: 1% 2% 1% 2%;
+    padding: 0 0 0 0;
 }
 
 .trend1 {
@@ -289,7 +278,9 @@ a {
     color: #ffffff;
     border: 3px solid #b59f5b;
     margin-bottom: 8px;
-    padding: 25px 20px 40px 30px;
+    padding: 36px 20px 30px 29px;
+    margin-left: 24px;
+    margin-right: 24px;
     width: 100%;
 }
 
@@ -360,8 +351,9 @@ a {
 }
 
 .main__post-info {
-    width: 44.6%;
+    width: 38.5%;
     margin-left: 30px;
+    margin-right: 30px;
     margin-top: -15px;
 }
 
@@ -460,7 +452,6 @@ a {
 /*===Right десктор===*/
 .sidebar {
     width: 272px;
-    /*width: 25%;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -525,6 +516,7 @@ a {
     line-height: normal;
     font-weight: 700;
     width: 180px;
+    margin-top: -14px;
 }
 
 .sidebar__title a:hover {
@@ -537,7 +529,7 @@ form.search__box {
     width: 272px;
     outline: none;
     outline-offset: 0;
-    margin-top: 78px;
+    margin-top: 68px;
     margin-bottom: 50px;
 }
 
@@ -550,7 +542,7 @@ form.search__box {
     font-size: 13px;
     color: #000000;
     outline: none;
-    padding: 18px 16px;
+    padding: 18px 15px;
     border-left: solid;
     border-bottom: solid;
     border-top: solid;
@@ -661,7 +653,7 @@ form.search__box {
     /*transform: translate(0px, -28px); */
 }
 
-.header__sidebar {
+.tag__header-sidebar {
     color: #0f0d0e;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -670,10 +662,11 @@ form.search__box {
     line-height: 29px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: -11px;
 }
 
 /*===Полоска под Теги===*/
-.header__sidebar::after {
+.tag__header-sidebar::after {
     content: "";
     display: block;
     background-color: #b59f5b;
@@ -716,6 +709,7 @@ form.search__box {
     font-weight: 700;
     font-style: normal;
     letter-spacing: normal;
+    margin-top: 14px;
 }
 
 .topics__sidebar {
@@ -837,7 +831,7 @@ form.search__box {
     align-items: center;
 }
 
-.product__img  {
+.product__img {
     text-align: center;
     background-repeat: no-repeat;
     height: 204px;
@@ -852,14 +846,13 @@ form.search__box {
 
 .product__info {
     outline: 3px solid #b59f5b;
-    outline-offset: 32px;
+    outline-offset: 30px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-left: 24px;
     margin-right: 24px;
-    /*margin-top: -15px;*/
     color: #0f0d0e;
 }
 
@@ -873,29 +866,17 @@ form.search__box {
     padding-top: 20px;
     line-height: 29px;
     text-align: left;
+    margin-top: 0;
 }
 
-.product__description-card1 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-    color: #0f0d0e;
-    font-weight: 700;
-}
-
-.product__description {
+.product__description-card {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
 }
 
-.product__link-card1 {
-    color: #d3c59d;
-    font-weight: 700;
-}
-
-.product__link {
+.product__link-card {
     color: #d3c59d;
 }
 
@@ -931,7 +912,7 @@ form.search__box {
 }
 
 .footer {
-    margin-top: 76px;
+    margin-top: 79px;
 }
 
 .footer__container {
@@ -1005,7 +986,7 @@ form.search__box {
     line-height: 40px;
     max-width: 1200px;
     margin: 0 auto 0 auto;
-    padding-top: 40px;
+    padding-top: 44px;
 }
 
 .visually-hidden {
@@ -1024,18 +1005,12 @@ form.search__box {
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
 
     .header {
-        width: 100%;
+        /*width: 100%;*/
         background-image: url("./images/banner-bg-tablet.jpg");
-        height: 392px;
-        max-width: 1200px;
-        padding-bottom: 100px;
-        margin-bottom: 50px;
+        padding-bottom: 70px;
     }
 
     .header__menu {
-        /*margin-left: 5%;*/
-        /*margin-right: 25px;*/
-        /*padding-top: 4.7%;*/
         padding-left: 30px;
         padding-right: 38px;
     }
@@ -1134,6 +1109,10 @@ form.search__box {
         margin-bottom: 4px;
     }
 
+    .trend__border {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
     .main__sidebar {
         flex-wrap: nowrap;
@@ -1141,6 +1120,7 @@ form.search__box {
 
     .main {
         width: calc((100% - 272px) / 2);
+        margin-left: 20px;
     }
 
     .main__post {
@@ -1170,6 +1150,14 @@ form.search__box {
         text-transform: uppercase;
     }
 
+    .post__text {
+        width: 381px;
+    }
+
+    .sidebar {
+        margin-right: 20px;
+    }
+
     .products__title {
         color: #0f0d0e;
         text-align: center;
@@ -1188,31 +1176,24 @@ form.search__box {
     .products__container-card {
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: 35px;
-        margin-right: 35px;
-    }
+             }
 
     .product__card {
-        width: calc(100% / 2 - 52px);
-        margin-bottom: 80px;
+        width: 47%;
+        /*width: calc(100% / 2 - 52px);*/
+        margin-bottom: 20px;
     }
 
-    .product__img  {
+    .product__img {
         height: 227px;
-        width: calc(100% - 48px);
-        /*width: 100%;*/
     }
 
     .product__preview {
         height: 227px;
-        width: calc(100% - 48px);
-        /*width: 100%;*/
     }
 
     .product__info {
-        /*margin: 0 auto 0 auto;*/
         margin-bottom: 40px;
-        /*max-width: 340px;*/
     }
 
     .social__info {
@@ -1223,13 +1204,16 @@ form.search__box {
         width: 100%;
         margin: auto;
     }
+
+    .footer {
+        margin-top: 16px;
+    }
 }
 
 /*===641-1200 Таблет пейзаж Тренд 4 карточки===*/
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
 
     .header {
-        width: 100%;
         background-image: url("./images/banner-bg-tablet.jpg");
     }
 
@@ -1240,7 +1224,6 @@ form.search__box {
     .header__menu {
         margin-left: 24px;
         margin-right: 35px;
-        /*padding-top: 6.5%;*/
     }
 
     .menu {
@@ -1351,35 +1334,28 @@ form.search__box {
     .products__container-card {
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: 35px;
-        margin-right: 35px;
     }
 
     .product__card {
-        width: calc(100% / 2 - 52px);
-        margin-bottom: 80px;;
+        width: 47%;
+        /*width: calc(100% / 2 - 52px);*/
+        margin-bottom: 20px;;
     }
 
-    .product__img  {
+    .product__img {
         height: 227px;
-        width: calc(100% - 48px);
-/*width: 100%;*/
     }
 
-    .product__preview  {
+    .product__preview {
         height: 227px;
-        width: calc(100% - 48px);
-        /*width: 100%;*/
     }
 
     .product__info {
-        /*margin: 0 auto 0 auto;*/
         margin-bottom: 40px;
-        /*max-width: 340px;*/
     }
 
     .footer {
-        margin-top: 30px;
+        margin-top: 16px;
     }
 }
 
@@ -1544,10 +1520,6 @@ form.search__box {
 
     .product__card {
         width: 100%;
-        /*margin-bottom: 80px;*/
-        /*margin-top: 80px;*/
-
-
         margin-bottom: 15%;
         margin-left: 9px;
         margin-right: 15px;
@@ -1579,7 +1551,7 @@ form.search__box {
 @media (max-width: 640px) and (orientation: landscape) {
 
     .header {
-        width: 100%;
+        /*width: 100%;*/
         background-image: url("./images/banner-mobile.jpg");
     }
 
@@ -1822,8 +1794,6 @@ form.search__box {
     background-color: #f4f7f6;
     transition: ease 0.2s;
     appearance: auto;
-    /*-webkit-appearance: none;*/
-    /*-moz-appearance: none;*/
     background-image: url("./svg/form-arrows.svg");
     background-size: 0.7em;
     background-repeat: no-repeat;
