@@ -23,6 +23,10 @@
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 ul {
@@ -177,9 +181,8 @@ a {
 
 .trends__container {
     /*display: flex;*/
-    /*width: 100%;*/
-
-    max-width: 1200px;
+    width: 100%;
+    /*max-width: 1200px;*/
     margin: auto;
     position: relative;
     /*z-index: 3;*/
@@ -1100,7 +1103,7 @@ form.search__box {
     .trends__container-card {
         /*display: flex; */
         flex-wrap: wrap;
-        max-height: 530px;
+        /*max-height: 530px;*/
     }
 
     .trend__card {
@@ -1132,7 +1135,7 @@ form.search__box {
         width: 100%;
         line-height: 1.5;
         margin-top: 10px;
-        margin-left: 0;
+        /*margin-left: 10px;*/
     }
 
     /* Style for "10 мест... Справа  */
@@ -1176,7 +1179,7 @@ form.search__box {
     .products__container-card {
         flex-wrap: wrap;
         justify-content: space-between;
-             }
+    }
 
     .product__card {
         width: 47%;
@@ -1366,7 +1369,8 @@ form.search__box {
         /* width: 100%; */
         background-image: url("./images/banner-mobile.jpg");
         margin-bottom: 0;
-        padding-bottom: 180px;
+        padding-bottom: 172px;
+        height: 640px;
     }
 
     .header__logo-mobile {
@@ -1375,10 +1379,16 @@ form.search__box {
         margin: auto;
     }
 
+    .logo {
+        width: 100%;
+        padding: 8px 29px 0 29px;
+    }
+
     .header__menu {
         flex-direction: column-reverse;
         align-items: end;
         padding-right: 15px;
+        padding-top: 22px;
     }
 
     .menu {
@@ -1398,7 +1408,7 @@ form.search__box {
     .header__container {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 18px;
+        margin-top: 4px;
         padding: 20px;
     }
 
@@ -1460,8 +1470,8 @@ form.search__box {
     }
 
     .trends__title {
-        margin-top: 48px;
-        font-size: 1.1em;
+        margin-top: 44px;
+        font-size: 16px;
     }
 
     .trends__title:after {
@@ -1470,43 +1480,113 @@ form.search__box {
 
     .trends__container-card {
         flex-wrap: wrap;
-        max-height: 1240px;
+        /*max-height: 1240px;*/
     }
 
     .trend__card {
-        width: calc((100% - (4px * 3)) / 2);
-        max-height: 249px;
+        width: 100%;
+        /*width: calc((100% - (4px * 3)) / 2);*/
+        max-height: 234px;
         margin-bottom: 4px;
     }
 
+    .trend__border {
+        margin-bottom: 12px;
+        padding: 22px 20px 30px 29px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .trend__container {
+        padding-top: 13px;
+    }
+
     .main__sidebar {
-        max-width: 640px;
+        width: 100%;
         flex-wrap: wrap;
         margin-top: 30px;
+        /*width: calc((100% - 272px) / 2);*/
     }
 
     .main {
         width: 100%;
+        /*width: calc((100% - 272px) / 2);*/
+        margin-left: 0;
+        margin-right: 5px;
     }
 
     .main__post {
+        width: 100%;
         flex-wrap: wrap;
+    }
+
+    .main__post-images {
+        width: 328px;
+        height: 252px;
     }
 
     .main__post-info {
         width: 100%;
         line-height: 1.5;
-        margin-top: 10px;
+        margin-top: 0;
         margin-left: 0;
     }
 
     .post__title a {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.3;
+    }
+
+    .date__author {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .post__text {
+        margin-top: 0;
+        line-height: 1.3;
     }
 
     .sidebar {
         margin-left: 0;
+        width: 100%;
+        /*margin-right: 5px;*/
+    }
+
+    .header__sidebar {
+        padding-top: 12px;
+        text-align: center;
+    }
+
+    .sidebar__post-info {
+        max-width: 240px;
+        margin-top: 0;
+    }
+
+    .sidebar__title a {
+        width: 240px;
+    }
+
+    form.search__box {
+        width: 330px;
+        margin-bottom: 39px;
+    }
+
+    .search {
+        width: 282px;
+    }
+
+    .subscribe__button {
+        width: 330px;
+    }
+
+    .tag {
+        margin-top: 48px;
+        margin-bottom: -36px;
+    }
+
+    .topics {
+        margin-top: 0;
     }
 
     .products__title {
@@ -1525,6 +1605,12 @@ form.search__box {
         margin-right: 15px;
     }
 
+    .product__info {
+        margin-left: 0;
+        margin-right: 0;
+        outline-offset: 23px;
+    }
+
     .product__img {
         /*width: calc(100% - 48px);*/
         width: 100%;
@@ -1538,12 +1624,16 @@ form.search__box {
     }
 
     .footer {
-        margin-top: 30px;
+        margin-top: 19px;
     }
 
     .socials__wrapper {
         width: 100%;
         margin: auto;
+    }
+
+    .copyright {
+        padding-top: 22px;
     }
 }
 
@@ -1653,7 +1743,7 @@ form.search__box {
     .trends__container-card {
         /*display: flex; */
         flex-wrap: wrap;
-        max-height: 530px;
+        /*max-height: 530px;*/
     }
 
     .trend__card {
@@ -1662,14 +1752,24 @@ form.search__box {
         margin-bottom: 4px;
     }
 
+    .trend__border {
+        margin-bottom: 12px;
+        padding: 22px 20px 30px 29px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     .main__sidebar {
-        max-width: 640px;
+        width: 100%;
         flex-wrap: wrap;
         margin-top: 30px;
     }
 
     .main {
         width: 100%;
+        /*width: calc((100% - 272px) / 2);*/
+        margin-left: 0;
+        margin-right: 5px;
     }
 
     .main__post {
@@ -1683,8 +1783,22 @@ form.search__box {
     .main__post-info {
         width: 100%;
         line-height: 1.5;
-        margin-top: 10px;
+        margin-top: 0;
         margin-left: 0;
+    }
+
+    .post__title a {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .date__author {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .post__text {
+        margin-top: 0;
     }
 
     .product__title {
@@ -1693,6 +1807,45 @@ form.search__box {
 
     .sidebar {
         margin-left: 0;
+        /*margin-right: 5px;*/
+        width: 100%;
+    }
+
+    .header__sidebar {
+        padding-top: 12px;
+        /*margin: 0 auto;*/
+        text-align: center;
+    }
+
+    .sidebar__post-info {
+        max-width: 240px;
+        margin-top: 0;
+    }
+
+    .sidebar__title a {
+        width: 240px;
+    }
+
+    form.search__box {
+        width: 330px;
+        margin-bottom: 39px;
+    }
+
+    .search {
+        width: 282px;
+    }
+
+    .subscribe__button {
+        width: 330px;
+    }
+
+    .tag {
+        margin-top: 48px;
+        margin-bottom: -36px;
+    }
+
+    .topics {
+        margin-top: 0;
     }
 
     .products__container-card {
@@ -1706,10 +1859,20 @@ form.search__box {
         margin-right: 15px;
     }
 
+    .product__info {
+        margin-left: 0;
+        margin-right: 0;
+        outline-offset: 23px;
+    }
+
     .product__img .product__preview {
         /*width: calc(100% - 48px);*/
         width: 100%;
         height: 285px;
+    }
+
+    .footer {
+        margin-top: 19px;
     }
 
     .social__info {
@@ -1719,6 +1882,10 @@ form.search__box {
     .socials__wrapper {
         width: 100%;
         margin: auto;
+    }
+
+    .copyright {
+        padding-top: 22px;
     }
 }
 
