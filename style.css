@@ -48,7 +48,7 @@ a {
     margin-bottom: 60px;
     text-transform: uppercase;
     width: 100%;
-    padding-bottom: 103px;
+    padding-bottom: 107px;
 }
 
 .header::after {
@@ -914,7 +914,7 @@ form.search__box {
 }
 
 .footer {
-    margin-top: 79px;
+    margin-top: 88px;
 }
 
 .footer__container {
