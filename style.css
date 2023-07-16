@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 ul {
@@ -176,7 +176,7 @@ a {
 
 /*Сейчас в тренде */
 .trends {
-    width: 100%;
+    /*width: 100%; 16 июля*/
     margin-bottom: 60px;
 }
 
@@ -211,7 +211,7 @@ a {
 
 .trends__container-card {
     display: flex;
-    width: 100%;
+    /*width: 100%; 16 июля*/
     flex-wrap: nowrap;
     justify-content: space-between;
 }
@@ -345,7 +345,7 @@ a {
 }
 
 .main__post-images {
-    max-width: 381px;
+    width: 381px;
     /*height: 294px;*/
     background-color: #8acab5;
 }
@@ -388,7 +388,7 @@ a {
 /*===10 мест, слева===*/
 .post__title {
     display: flex;
-    width: 330px;
+    /*width: 330px; 16 июля*/
 }
 
 .post__title a {
@@ -527,7 +527,7 @@ a {
     color: #b59f5b;
 }
 
-/*===Найти===*/
+/*===Search===*/
 form.search__box {
     display: flex;
     width: 272px;
@@ -610,7 +610,7 @@ form.search__box {
     font-family: "OpenSans", sans-serif;
     box-sizing: border-box;
     border: none;
-    max-width: 272px;
+    width: 272px;
     height: 49px;
     background-color: #f4f7f6;
     font-size: 13px;
@@ -944,7 +944,6 @@ form.search__box {
 .socials__wrapper {
     display: flex;
     justify-content: center;
-    /*align-items: center; */
 }
 
 .socials {
@@ -1087,7 +1086,6 @@ form.search__box {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 45px;
-        /*max-height: 551px;*/
     }
 
     .trends__title {
@@ -1434,7 +1432,7 @@ form.search__box {
         margin-bottom: 0;
         padding-bottom: 172px;
         height: 640px;
-           }
+    }
 
     .header__logo-mobile {
         padding-top: 210px;
@@ -1563,19 +1561,14 @@ form.search__box {
     }
 
     .main__sidebar {
-        /*max-width: 640px;*/
         width: 100%;
         flex-wrap: wrap;
         margin-top: 30px;
-        padding-left: 0;
-        padding-right: 0;
     }
 
     .main {
         width: 100%;
-        /*width: calc((100% - 272px) / 2);*/
-        margin-left: 0;
-        /*margin-right: 5px;*/
+        /*margin-left: 0; 16 июля*/
     }
 
     .main__post {
@@ -1585,8 +1578,6 @@ form.search__box {
 
     .main__post-images {
         width: 100%;
-        /*max-width: 328px;*/
-        /*max-height: 252px;*/
     }
 
     .main__post-info {
@@ -1618,7 +1609,7 @@ form.search__box {
     }
 
     .sidebar__picture {
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .header__sidebar {
@@ -1628,17 +1619,21 @@ form.search__box {
 
     .sidebar__post-info {
         /*width: 100%;*/
-        width: calc(100% - 70px - 10px);
+        width: calc(100% - 70px - 20px);
         margin-top: 0;
     }
 
     .sidebar__title a {
-        width: 240px;
+        /*width: calc(100% - 70px - 20px);*/
+        font-family: "OpenSans", sans-serif;
+        font-size: 12px;
     }
 
+    /**Search*/
     .search__box {
-        width: 330px;
+        width: 100%;
     }
+
 
     form.search__box {
         width: 100%;
@@ -1646,22 +1641,36 @@ form.search__box {
     }
 
     .search {
-        width: 282px;
+        width: 100%;
+        padding-right: 0;
+        margin-right: 66px;
     }
 
+    /*Рассылка*/
     .subscribe__box {
         width: 100%;
     }
 
-    .subscribe__button {
-        width: 330px;
+    .subscribe__label {
+        width: 100%;
+        display: block;
     }
 
+    .email {
+        width: 100%;
+    }
+
+    .subscribe__button {
+        width: 100%;
+    }
+
+    /*Теги*/
     .tag {
         margin-top: 48px;
         margin-bottom: -36px;
     }
 
+    /*Темы*/
     .topics {
         margin-top: 0;
     }
@@ -1670,6 +1679,7 @@ form.search__box {
         margin-top: 0;
     }
 
+    /*Products*/
     .products__title {
         margin-top: 48px;
         font-size: 1.1em;
@@ -1689,7 +1699,7 @@ form.search__box {
     .product__info {
         margin-left: 0;
         margin-right: 0;
-        outline-offset: 23px;
+        outline-offset: 18px;
     }
 
     .product__img {
@@ -1829,18 +1839,13 @@ form.search__box {
         margin-bottom: 4px;
     }
 
-    /*.trend__border {*/
-    /*    padding-left: 3px;*/
-    /*}*/
     .main__sidebar {
-        max-width: 640px;
         flex-wrap: wrap;
         margin-top: 30px;
     }
 
     .main {
         width: 100%;
-        /*width: calc((100% - 272px) / 2);*/
         margin-left: 0;
         margin-right: 5px;
     }
@@ -1876,7 +1881,6 @@ form.search__box {
 
     .sidebar {
         margin-left: 0;
-        /*margin-right: 5px;*/
         width: 100%;
     }
 
@@ -1895,6 +1899,7 @@ form.search__box {
         width: 240px;
     }
 
+    /*Search*/
     .search__box {
         width: 330px;
     }
@@ -1908,6 +1913,7 @@ form.search__box {
         width: 282px;
     }
 
+    /*Рассылка*/
     .subscribe__box {
         width: 100%;
     }
@@ -1990,7 +1996,6 @@ form.search__box {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*padding: 30px 10px; */
 }
 
 .popup__content {
