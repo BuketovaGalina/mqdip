@@ -769,16 +769,13 @@ form.search__box {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto 0 auto;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 /*Заголовок наши изделия*/
 .products__container {
     display: flex;
-    /*width: 100%; */
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
-}
+     }
 
 .products__title {
     margin: auto;
@@ -806,11 +803,9 @@ form.search__box {
 .products__container-card {
     display: flex;
     /*width: 100%; */
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .products__card::before {
@@ -830,30 +825,35 @@ form.search__box {
 .product__card {
     display: flex;
     flex-direction: column;
-    width: calc(100% / 3 - 52px);
+         width: calc(100% / 3 - 62px);
     align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .product__img {
     text-align: center;
     background-repeat: no-repeat;
     /*height: 204px;*/
-    width: 100%;
+    width: calc(100% - 20px);
     object-fit: cover;
     object-position: bottom;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px; 17 июля*/
+    /*padding-right: 10px; 17 июля*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .product__preview {
+    width: 100%;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px; 17июля*/
+    /*padding-right: 10px; 17 июля*/
 }
 
 .product__info {
     outline: 3px solid #b59f5b;
-    outline-offset: 34px;
+    outline-offset: 32px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -861,6 +861,7 @@ form.search__box {
     margin-left: 24px;
     margin-right: 24px;
     color: #0f0d0e;
+    width: calc(100% - 20px);
 }
 
 .product__title {
@@ -1202,7 +1203,7 @@ form.search__box {
 
     .product__card {
         width: calc(100% / 2 - 52px);
-        margin-bottom: 20px;
+        margin-bottom: 28px;
     }
 
     .product__img {
@@ -1218,7 +1219,7 @@ form.search__box {
     }
 
     .product__info {
-        margin-bottom: 77px;
+        margin-bottom: 59px;
     }
 
     .social__info {
@@ -1398,7 +1399,7 @@ form.search__box {
 
     .product__card {
         width: calc(100% / 2 - 52px);
-        margin-bottom: 20px;;
+        margin-bottom: 28px;;
     }
 
     .product__img {
@@ -1412,7 +1413,7 @@ form.search__box {
     }
 
     .product__info {
-        margin-bottom: 77px;
+        margin-bottom: 59px;
     }
 
     .footer {
